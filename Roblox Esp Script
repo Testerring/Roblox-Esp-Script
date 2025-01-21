@@ -1,0 +1,25 @@
+local Players = game:GetService("Players")
+
+while true do
+    for _, Player in ipairs(Players:GetPlayers()) do
+        local Character = Player.Character
+
+        if Character then
+            -- Check if there is already a Highlight and remove it before creating a new one
+            local existingHighlight = Character:FindFirstChildOfClass("Highlight")
+            if existingHighlight then
+                existingHighlight:Destroy()
+            end
+
+            -- Create a new Highlight
+            local Highlight = Instance.new("Highlight")
+            Highlight.Parent = Character
+            Highlight.Adornee = Character
+            Highlight.FillTransparency = 1
+            Highlight.OutlineColor = Color3.fromRGB(255, 255, 255)
+            Highlight.OutlineTransparency = 0
+            Highlight.DepthMode = "Occluded"
+        end
+    end
+    wait(1) -- Reset every 1 seconds
+end
