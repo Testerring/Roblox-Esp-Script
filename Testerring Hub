@@ -161,30 +161,32 @@ local VisualSection = VisualTab:CreateSection("Visual Settings👁️")
 local Button = VisualTab:CreateButton({
    Name = "ESP",
    Callback = function()
-        local Players = game:GetService("Players")
+local Players = game:GetService("Players")
 
 while true do
     for _, Player in ipairs(Players:GetPlayers()) do
         local Character = Player.Character
 
-        if Character then
+        -- Ensure the character exists and has a HumanoidRootPart
+        if Character and Character:FindFirstChild("HumanoidRootPart") then
             
+            -- Remove any existing Highlight
             local existingHighlight = Character:FindFirstChildOfClass("Highlight")
             if existingHighlight then
                 existingHighlight:Destroy()
             end
 
-            -- Create a new Highlight
+            -- Create a new Highlight and set its properties
             local Highlight = Instance.new("Highlight")
             Highlight.Parent = Character
             Highlight.Adornee = Character
-            Highlight.FillTransparency = 1
-            Highlight.OutlineColor = Color3.fromRGB(255, 255, 255)
-            Highlight.OutlineTransparency = 0
-            Highlight.DepthMode = "Occluded"
+            Highlight.FillTransparency = 1  -- Make the fill transparent
+            Highlight.OutlineColor = Color3.fromRGB(255, 255, 255)  -- White outline
+            Highlight.OutlineTransparency = 0  -- Fully visible outline
+            Highlight.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop  -- Make the highlight visible through walls
         end
     end
-    wait(1) -- Reset every 1 seconds
+    wait(1) -- Reset every 1 second to ensure constant updates
 end
 
    end,
