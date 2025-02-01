@@ -28,7 +28,7 @@ local Window = Rayfield:CreateWindow({
       Subtitle = "Key System🗝️",
       Note = "Just Making Sure That You Are Not A Bot👀", -- Use this to tell the user how to get a key
       FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
-      SaveKey = false, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
       GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
       Key = {"XenoTesterring"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
    }
@@ -553,6 +553,15 @@ local Button = OtherTab:CreateButton({
    end,
 })
 
+local OtherSection = OtherTab:CreateSection("Key Hubs")
+
+local Button = OtherTab:CreateButton({
+    Name = "Fisch Lunor",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Just3itx/Lunor-Loadstrings/refs/heads/main/Loader"))()
+    end,
+ })
+
 local OtherSection = OtherTab:CreateSection("Tools")
 
 local Button = OtherTab:CreateButton({
@@ -568,3 +577,10 @@ local Button = OtherTab:CreateButton({
        loadstring(game:HttpGet("https://pastefy.app/YZoglOyJ/raw"))()
    end,
 })
+
+local Button = OtherTab:CreateButton({
+    Name = "Shadow Run (50% FE)",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/memeenjoyer43/Shadow-Speed/refs/heads/main/Script"))()
+    end,
+ })
