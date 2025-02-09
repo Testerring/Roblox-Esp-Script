@@ -4,7 +4,7 @@ local Window = Rayfield:CreateWindow({
    Name = "🌌Universal Testerring Hub🌌",
    Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
    LoadingTitle = "Loading Testerring Hub",
-   LoadingSubtitle = "by XenoTesterring & XenoMasteryV",
+   LoadingSubtitle = "by XenoTesterring&XenoMasteryV",
    Theme = "Default", -- Check https://docs.sirius.menu/rayfield/configuration/themes
 
    DisableRayfieldPrompts = false,
