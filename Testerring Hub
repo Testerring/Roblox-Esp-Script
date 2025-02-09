@@ -189,7 +189,7 @@ end)
 })
 
 local Button = AimTab:CreateButton({
-   Name = "Body Aimbot",
+   Name = "Body Aimbot(OP🔥)",
    Callback = function()
          local teamCheck = false
 local fov = 90
