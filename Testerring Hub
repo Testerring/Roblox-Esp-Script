@@ -1,10 +1,10 @@
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
-   Name = "Testerring Hub",
+   Name = "🌌Universal Testerring Hub🌌",
    Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
    LoadingTitle = "Loading Testerring Hub",
-   LoadingSubtitle = "by XenoTesterring",
+   LoadingSubtitle = "by XenoTesterring,XenoMasteryV",
    Theme = "Default", -- Check https://docs.sirius.menu/rayfield/configuration/themes
 
    DisableRayfieldPrompts = false,
@@ -22,7 +22,7 @@ local Window = Rayfield:CreateWindow({
       RememberJoins = true -- Set this to false to make them join the discord every time they load it up
    },
 
-   KeySystem = true, -- Set this to true to use our key system
+   KeySystem = false, -- Set this to true to use our key system
    KeySettings = {
       Title = "Testerring Hub | Key",
       Subtitle = "Key System🗝️",
@@ -579,7 +579,7 @@ local Button = OtherTab:CreateButton({
 })
 
 local Button = OtherTab:CreateButton({
-    Name = "Shadow Run (50% FE)",
+    Name = "Shadow Run",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/memeenjoyer43/Shadow-Speed/refs/heads/main/Script"))()
     end,
