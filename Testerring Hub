@@ -522,7 +522,7 @@ end)
    end,
 })
 
-local OtherTab = Window:CreateTab("Other", nil) -- Title, Image
+local OtherTab = Window:CreateTab("Other✉️", nil) -- Title, Image
 local OtherSection = OtherTab:CreateSection("Hubs")
 
 local Button = OtherTab:CreateButton({
